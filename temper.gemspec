@@ -17,4 +17,6 @@ Gem::Specification.new do |gem|
   
   gem.add_runtime_dependency "mime-types"
   gem.add_runtime_dependency "cocaine"
+  
+  gem.add_development_dependency "rspec", "> 2.0"
 end
