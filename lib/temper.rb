@@ -1,6 +1,7 @@
 require 'tempfile'
 require 'stringio'
 require 'mime/types'
+require 'shellter'
 
 module Temper
   autoload :Base, 'temper/base'

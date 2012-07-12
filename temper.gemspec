@@ -16,7 +16,8 @@ Gem::Specification.new do |gem|
   gem.version       = Temper::VERSION
   
   gem.add_runtime_dependency "mime-types"
-  gem.add_runtime_dependency "cocaine"
+  gem.add_runtime_dependency "shellter"
+  gem.add_runtime_dependency "popen4"
   
   gem.add_development_dependency "rspec", "> 2.0"
 end
