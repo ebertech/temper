@@ -7,6 +7,18 @@ module Temper
       raise RuntimeException, "No @storage set" unless @storage
       self.original_filename = options[:original_filename] || ::File.basename(path)
       self.content_type = options[:content_type] || infer_content_type || "text/plain"
+      
+      if block_given?
+        begin
+          yield self
+        ensure
+          close
+        end
+      end
+    end
+    
+    def close
+      #noop
     end
 
     def fingerprint

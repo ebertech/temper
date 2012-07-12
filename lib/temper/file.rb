@@ -7,7 +7,11 @@ module Temper
       if path && ::File.exists?(path)
         options[:original_filename] ||= ::File.basename(path) 
       end
-      super options
+      super options    
+    end
+    
+    def close
+      @storage.close(true)
     end
     
     private 
